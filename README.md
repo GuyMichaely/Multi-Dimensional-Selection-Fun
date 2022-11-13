@@ -44,8 +44,8 @@ First, realize that if you take elements *x<sub>1</sub>* and *x<sub>2</sub>* fro
 
 Next, realize that, given a global minimum element in a selection, the optimal maxmimum element for that selection can be found iteratively. Given that the rows of *arr* are sorted, an initial selection from *arr* that aims to minimize selection score should take only ⌈*m / 2*⌉ elements from each *arr[i]*. In order to minimize score, we should want each selection within an array to be as far to the *left* as possible so as to avoid larger values on the *right*.
 
-Hence, each selection within an array will start with the smallest element ≥ the given global minimum and will take only as many elements to the right as neccesary (⌈*m / 2*⌉). From this selection we can identify the optimal global max for the given global min
+Hence, each selection within an array will start with the smallest element ≥ the given global minimum and will take only as many elements to the right as neccesary (⌈*m / 2*⌉). From this selection we can identify the optimal global maximum for the given global minimum.
 
-Finally, having identified a global maximum, we can extend each selection from *arr[i]* to the right up to the last element ≤ the global maximum. The resulting selection has minimum score and maximum length for the given global minimum.
+Finally, having identified a global maximum, we can extend each selection from *arr\[i]* to the right up to the last element ≤ the global maximum. The resulting selection has minimum score and maximum length for the given global minimum.
 
 Knowing this, we can simply take each element in the matrix as a global minimum and return the solution with the best *k* \* *length* score.
