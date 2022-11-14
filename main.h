@@ -6,10 +6,9 @@
 log2(10^9) = 29.9 -> need 30 bits to radix sort
 */
 const int MAX = 1e9;
-const int MAX_BITS = 30;
 
 void radixSort(const int length, int arr[length]) {
-	const int j = log2(1e9) + 1;
+	const int MAX_BITS = log2(1e9) + 1;
 	int buckets[2][length];
 	int bucketIndices[2];
 
